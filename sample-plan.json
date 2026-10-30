@@ -1,0 +1,223 @@
+{
+  "settings": {
+    "project": "Sample project",
+    "start": "2026-11-02",
+    "target": "2026-11-20",
+    "cap": 6,
+    "decision": "",
+    "extraDays": 0,
+    "sections": {
+      "DEV": {
+        "label": "Delivery",
+        "team": "Dev team",
+        "show": true
+      },
+      "TEST": {
+        "label": "Testing",
+        "team": "QA team",
+        "show": true
+      },
+      "VAL": {
+        "label": "Validation (green flag)",
+        "team": "",
+        "show": true
+      },
+      "APR": {
+        "label": "Release approval",
+        "team": "",
+        "show": true
+      }
+    },
+    "groups": [
+      "Development",
+      "Documents",
+      "Workflow test",
+      "Final checks"
+    ],
+    "ranges": [
+      {
+        "type": "mark",
+        "name": "Code freeze",
+        "start": "2026-11-06",
+        "days": 1,
+        "color": "m1"
+      },
+      {
+        "type": "test",
+        "name": "Testing block 1",
+        "start": "2026-11-09",
+        "days": 5
+      },
+      {
+        "type": "val",
+        "name": "Validation 1",
+        "start": "2026-11-12",
+        "days": 2
+      },
+      {
+        "type": "off",
+        "name": "Public holiday",
+        "start": "2026-11-16",
+        "days": 1
+      }
+    ]
+  },
+  "cap": {},
+  "items": [
+    {
+      "id": "D1",
+      "name": "Login and sign-up fixes",
+      "who": "Dev team, QA team",
+      "group": "Development",
+      "has": {
+        "DEV": true,
+        "TEST": true,
+        "VAL": true,
+        "APR": false
+      },
+      "due": "2026-11-03",
+      "tday": "2026-11-09",
+      "vday": "2026-11-12",
+      "aday": "",
+      "span": 1,
+      "gf": "Product owner",
+      "appr": "",
+      "h": {
+        "TEST": 4,
+        "VAL": 1
+      },
+      "deps": "",
+      "done": "All reported login bugs fixed and retested",
+      "st": {
+        "DEV": 0,
+        "TEST": 0,
+        "VAL": 0,
+        "APR": 0
+      }
+    },
+    {
+      "id": "D2",
+      "name": "Payment flow update",
+      "who": "Dev team, Finance",
+      "group": "Development",
+      "has": {
+        "DEV": true,
+        "TEST": true,
+        "VAL": true,
+        "APR": false
+      },
+      "due": "2026-11-04",
+      "tday": "2026-11-10",
+      "vday": "2026-11-13",
+      "aday": "",
+      "span": 2,
+      "gf": "Finance lead",
+      "appr": "",
+      "h": {
+        "TEST": 8,
+        "VAL": 2
+      },
+      "deps": "",
+      "done": "Card and UPI payments succeed end to end; refunds post correctly",
+      "st": {
+        "DEV": 0,
+        "TEST": 0,
+        "VAL": 0,
+        "APR": 0
+      }
+    },
+    {
+      "id": "DOC1",
+      "name": "User guide for support staff",
+      "who": "Shared by Dev team",
+      "group": "Documents",
+      "has": {
+        "DEV": true,
+        "TEST": true,
+        "VAL": true,
+        "APR": false
+      },
+      "due": "2026-11-05",
+      "tday": "2026-11-11",
+      "vday": "2026-11-12",
+      "aday": "",
+      "span": 1,
+      "gf": "Support lead",
+      "appr": "",
+      "h": {
+        "TEST": 2,
+        "VAL": 1
+      },
+      "deps": "",
+      "done": "Guide covers every screen support uses",
+      "st": {
+        "DEV": 0,
+        "TEST": 0,
+        "VAL": 0,
+        "APR": 0
+      }
+    },
+    {
+      "id": "W1",
+      "name": "Order to delivery workflow",
+      "who": "QA team",
+      "group": "Workflow test",
+      "has": {
+        "DEV": false,
+        "TEST": true,
+        "VAL": true,
+        "APR": false
+      },
+      "due": "",
+      "tday": "2026-11-12",
+      "vday": "2026-11-13",
+      "aday": "",
+      "span": 1,
+      "gf": "",
+      "appr": "",
+      "h": {
+        "TEST": 4,
+        "VAL": 1
+      },
+      "deps": "D1:T, D2:T",
+      "done": "An order can be placed, paid, packed and delivered without errors",
+      "st": {
+        "DEV": 0,
+        "TEST": 0,
+        "VAL": 0,
+        "APR": 0
+      }
+    },
+    {
+      "id": "A1",
+      "name": "Release sign-off",
+      "who": "Leadership",
+      "group": "Final checks",
+      "has": {
+        "DEV": false,
+        "TEST": false,
+        "VAL": false,
+        "APR": true
+      },
+      "due": "",
+      "tday": "",
+      "vday": "",
+      "aday": "2026-11-17",
+      "span": 1,
+      "gf": "",
+      "appr": "Head of Product",
+      "h": {
+        "TEST": 2,
+        "VAL": 1
+      },
+      "deps": "",
+      "done": "Formal approval to release",
+      "st": {
+        "DEV": 0,
+        "TEST": 0,
+        "VAL": 0,
+        "APR": 0
+      }
+    }
+  ]
+}
