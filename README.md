@@ -13,7 +13,7 @@ Checkpoint is a lightweight, single-file tracker for getting a project ready to 
 
 It runs entirely in your browser. There is no server, no account and no install. Your plan is kept in the browser and in plan files you save, so you can pick it up again any time.
 
-![Checkpoint screenshot](docs/screenshot.png)
+![Checkpoint screenshot](screenshot.png)
 
 ## Quick start
 
